@@ -391,6 +391,11 @@ PrefabInstance:
       propertyPath: dropdown
       value: 
       objectReference: {fileID: 688273866}
+    - target: {fileID: 5780237965223786795, guid: 6b6b14d0ddeb9472884516b72f7f9924,
+        type: 3}
+      propertyPath: playButton
+      value: 
+      objectReference: {fileID: 688273867}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b6b14d0ddeb9472884516b72f7f9924, type: 3}
 --- !u!1 &200219375
@@ -940,6 +945,15 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1434471031, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5780237965223786795, guid: 6b6b14d0ddeb9472884516b72f7f9924,
+        type: 3}
+    - target: {fileID: 1434471031, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Pause
+      objectReference: {fileID: 0}
     - target: {fileID: 1098308018, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -948,6 +962,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1098308020, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098308020, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5780237965223786795, guid: 6b6b14d0ddeb9472884516b72f7f9924,
+        type: 3}
     - target: {fileID: 225378534, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1039,6 +1062,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 853051423, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &688273867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1098308020, guid: 7193bcb63874b4f76a9a17fbb276acd2,
+    type: 3}
+  m_PrefabInstance: {fileID: 688273860}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &924943078

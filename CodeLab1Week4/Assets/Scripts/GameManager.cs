@@ -11,6 +11,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+	public Button playButton;
+	
 	public float initCubeBlueSpawnDelay = 3;
 	public float initCubeRedSpawnDelay = 5.5f;
 	public float cubeSpawnRate = 8;
@@ -118,6 +120,9 @@ public class GameManager : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{	
+		
+		//playButton.gameObject.SetActive(false);
+		
 		if (instance == null) //if there is no other instance of LevelManager already in the scene
 		{
 			DontDestroyOnLoad(gameObject); //don't destroy this LevelManager
@@ -146,16 +151,6 @@ public class GameManager : MonoBehaviour
 	{
 		LevelTimer();
 		CheckForPrize();
-		
-		/*if (timeLeft <= 0)
-		{
-			LevelLoader();
-		}
-
-		if (Health <= 0)
-		{
-			GameOver();
-		}*/
 	}
 	
 	void LevelTimer()
@@ -216,6 +211,18 @@ public class GameManager : MonoBehaviour
 			SceneManager.LoadScene(0); //load first level
 		}
 	}
+
+	public void Pause()
+	{
+		Time.timeScale = 0;
+		//playButton.gameObject.SetActive(true);
+	}
+
+	/*public void Play()
+	{
+		Time.timeScale = 1;
+		playButton.gameObject.SetActive(false);
+	}*/
 	
 	public void DifficultySetting(int difficultyIndex)
     {
