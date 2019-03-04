@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,7 +17,6 @@ public class GameManager : MonoBehaviour
 	private const string MyHighScore_File = "/MyHighScore.txt";
 	
 	int health = 100;
-
 	public int Health
 	{
 		get { return health; }
@@ -35,7 +36,6 @@ public class GameManager : MonoBehaviour
 	}
 
 	int score = 0;
-
 	public int Score
 	{
 		get
@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour
 	}
 
 	int highScore = 0;
-
 	public int HighScore
 	{
 		get
@@ -62,8 +61,8 @@ public class GameManager : MonoBehaviour
 			if (value > highScore)
 			{
 				highScore = value;
-				string fullPathToFile = Application.dataPath + MyHighScore_File;
-				File.WriteAllText(fullPathToFile, "The current high score is " + highScore);
+				string fullPathToFile = Application.dataPath + MyHighScore_File; //create string for path to MyHighScore file
+				File.WriteAllText(fullPathToFile, "The current high score is " + highScore); //write HighScore in file
 			}
 		}
 	}
@@ -82,7 +81,11 @@ public class GameManager : MonoBehaviour
 		{
 			Destroy(gameObject); //otherwise, if there is an instance already in this scene, destroy this LevelManager
 		}
-		
+
+		string myHighScoreFileText = File.ReadAllText(Application.dataPath + MyHighScore_File); //get text from myHighScore file
+		string[] highScoreSplit = myHighScoreFileText.Split(' '); //divide text by spaces
+		HighScore = Int32.Parse(highScoreSplit[5]); //the high score number in file to int and set HighScore to that int
+
 		HeartSpawn(); //spawn first prize at the start of our game
 		InvokeRepeating("CubeBlueSpawn", initCubeBlueSpawnDelay, cubeSpawnRate); //spawn CubeBlue according to our init delay in seconds, and then repeat according to our cubeSpawnRate
 		InvokeRepeating("CubeRedSpawn", initCubeRedSpawnDelay, cubeSpawnRate); //spawn CubeRed according to our init delay in seconds, and then repeat according to our cubeSpawnRate
@@ -100,13 +103,13 @@ public class GameManager : MonoBehaviour
 		newPrize.transform.position = new Vector3(Random.Range(-10, 10), Random.Range(-4, 4), 0.78f); //at new, random location
 	}
 
-	void CubeBlueSpawn() //function for spawning our cube prizes
+	void CubeBlueSpawn() //function for spawning our blue cube prizes
 	{
 		GameObject newCube1 = Instantiate(Resources.Load<GameObject>("Prefabs/CubeBlue"));
 		newCube1.transform.position = new Vector2(Random.Range(-10, 10), Random.Range(-4, 4));
 	}
 
-	void CubeRedSpawn()
+	void CubeRedSpawn() //function for spawning our red cube prizes
 	{
 		GameObject newCube2 = Instantiate(Resources.Load<GameObject>("Prefabs/CubeRed"));
 		newCube2.transform.position = new Vector2(Random.Range(-10, 10), Random.Range(-4, 4));
