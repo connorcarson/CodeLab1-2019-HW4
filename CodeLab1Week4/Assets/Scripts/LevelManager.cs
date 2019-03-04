@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    //private List<string> difficultyLevel = new List<string>() {"Easy", "Normal", "Difficult"};
+    //public Dropdown dropdown;
+    //public GameObject playButton;
+    //public GameObject dropDownMenu;
+    
     public Canvas canvas;
+    
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI healthText;
@@ -16,19 +23,21 @@ public class LevelManager : MonoBehaviour
 
     public int sceneIndex;
     public float timeLeft = 30;
+    public float timeMax = 30;
     private int wholeTime;
     public float restartTimer;
     public float restartDelay = 8;
 
+    
     public float TimeLeft
     {
         get { return timeLeft; }
         set
         {
             timeLeft = value;
-            if (timeLeft > 30)
+            if (timeLeft > timeMax)
             {
-                timeLeft = 30;
+                timeLeft = timeMax;
             }
 
             if (timeLeft < 0)
@@ -40,7 +49,10 @@ public class LevelManager : MonoBehaviour
     
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        //playButton.SetActive(false);
+        //dropDownMenu.SetActive(false);
+        //dropdown.AddOptions(difficultyLevel);
         anim = canvas.GetComponent<Animator>();
     }
 
@@ -105,6 +117,43 @@ public class LevelManager : MonoBehaviour
             GameManager.instance.Score = 0; //reset score
             GameManager.instance.Health = 100;
             SceneManager.LoadScene(0); //load first level
+        }
+    }
+    
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        //playButton.SetActive(true);
+        //dropDownMenu.SetActive(true);
+    }
+
+    public void PlayGame()
+    {
+        Time.timeScale = 1;
+        //playButton.SetActive(false);
+        //dropDownMenu.SetActive(false);
+    }
+    
+    public void DifficultySetting(int difficultyIndex)
+    {
+        if (difficultyIndex == 0)
+        {
+            //GameManager.instance.initCubeRedSpawnDelay = 5;
+            //GameManager.instance.initCubeBlueSpawnDelay = 8;
+            //GameManager.instance.cubeSpawnRate = 10;
+
+        }
+        else if (difficultyIndex == 1)
+        {
+            //GameManager.instance.initCubeRedSpawnDelay = 3.5f;
+            //GameManager.instance.initCubeBlueSpawnDelay = 6f;
+            //GameManager.instance.cubeSpawnRate = 8;
+        } 
+        else if (difficultyIndex == 2)
+        {
+            //GameManager.instance.initCubeRedSpawnDelay = 1.5f;
+            //GameManager.instance.initCubeBlueSpawnDelay = 3;
+            //GameManager.instance.cubeSpawnRate = 5;
         }
     }
 }

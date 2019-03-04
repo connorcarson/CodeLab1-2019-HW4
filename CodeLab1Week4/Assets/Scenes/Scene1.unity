@@ -356,6 +356,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5780237965223786795, guid: 6b6b14d0ddeb9472884516b72f7f9924,
+        type: 3}
+      propertyPath: cubeSpawnRate
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b6b14d0ddeb9472884516b72f7f9924, type: 3}
 --- !u!1 &200219375
@@ -873,6 +878,48 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221500811781841971, guid: 7193bcb63874b4f76a9a17fbb276acd2,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221500811781841971, guid: 7193bcb63874b4f76a9a17fbb276acd2,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 661785583, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 661785583, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 225378534, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 225378534, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 225378534, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 225378534, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 225378534, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 225378534, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
@@ -1631,6 +1678,21 @@ PrefabInstance:
       propertyPath: highScoreText
       value: 
       objectReference: {fileID: 688273865}
+    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
+        type: 3}
+      propertyPath: dropdown
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
+        type: 3}
+      propertyPath: timeLeft
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
+        type: 3}
+      propertyPath: timeMax
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9326ae02fe2d249989fdb7f4d7b613ef, type: 3}
 --- !u!1 &1593125646
