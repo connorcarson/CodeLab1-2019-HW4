@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
 
     private Animator anim;
 
+    public int sceneIndex;
     public float timeLeft = 30;
     private int wholeTime;
     public float restartTimer;
@@ -83,7 +84,7 @@ public class LevelManager : MonoBehaviour
         restartTimer += Time.deltaTime; //count up in seconds
         if (restartTimer >= restartDelay) //if restart timer is equal to our restart delay
         {
-            SceneManager.LoadScene(1); //load next level
+            SceneManager.LoadScene(sceneIndex); //load next level
         }
     }
     
@@ -94,7 +95,7 @@ public class LevelManager : MonoBehaviour
         restartTimer += Time.deltaTime; //count up in seconds
         if (restartTimer >= restartDelay) //if restart timer is equal to our restart delay
         {
-            SceneManager.LoadScene(0); //load next level
+            SceneManager.LoadScene(0); //load first level
         }
     }
 }
