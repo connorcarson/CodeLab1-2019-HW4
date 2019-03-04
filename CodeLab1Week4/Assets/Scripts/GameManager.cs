@@ -7,7 +7,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-	public float initCubeSpawnDelay = 3;
+	public float initCubeBlueSpawnDelay = 3;
+	public float initCubeRedSpawnDelay = 5.5f;
 	public float cubeSpawnRate = 8;
 	
 
@@ -61,7 +62,8 @@ public class GameManager : MonoBehaviour
 		}
 		
 		HeartSpawn(); //spawn first prize at the start of our game
-		InvokeRepeating("CubeSpawn", initCubeSpawnDelay, cubeSpawnRate); //spawn CubeRed and CubeBlue according to our init delay in seconds, and then repeat according to our cubeSpawnRate
+		InvokeRepeating("CubeBlueSpawn", initCubeBlueSpawnDelay, cubeSpawnRate); //spawn CubeBlue according to our init delay in seconds, and then repeat according to our cubeSpawnRate
+		InvokeRepeating("CubeRedSpawn", initCubeRedSpawnDelay, cubeSpawnRate); //spawn CubeRed according to our init delay in seconds, and then repeat according to our cubeSpawnRate
 	}
 
 	// Update is called once per frame
@@ -76,10 +78,14 @@ public class GameManager : MonoBehaviour
 		newPrize.transform.position = new Vector3(Random.Range(-10, 10), Random.Range(-4, 4), 0.78f); //at new, random location
 	}
 
-	void CubeSpawn() //function for spawning our cube prizes
+	void CubeBlueSpawn() //function for spawning our cube prizes
 	{
 		GameObject newCube1 = Instantiate(Resources.Load<GameObject>("Prefabs/CubeBlue"));
 		newCube1.transform.position = new Vector2(Random.Range(-10, 10), Random.Range(-4, 4));
+	}
+
+	void CubeRedSpawn()
+	{
 		GameObject newCube2 = Instantiate(Resources.Load<GameObject>("Prefabs/CubeRed"));
 		newCube2.transform.position = new Vector2(Random.Range(-10, 10), Random.Range(-4, 4));
 	}

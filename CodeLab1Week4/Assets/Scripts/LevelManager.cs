@@ -95,6 +95,8 @@ public class LevelManager : MonoBehaviour
         restartTimer += Time.deltaTime; //count up in seconds
         if (restartTimer >= restartDelay) //if restart timer is equal to our restart delay
         {
+            GameManager.instance.Score = 0; //reset score
+            GameManager.instance.Health = 100;
             SceneManager.LoadScene(0); //load first level
         }
     }
