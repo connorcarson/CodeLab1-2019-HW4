@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI healthText;
+    public TextMeshProUGUI highScoreText;
 
     private Animator anim;
 
@@ -49,6 +50,7 @@ public class LevelManager : MonoBehaviour
         LevelTimer();
         ScoreDisplay();
         HealthDisplay();
+        HighScoreDisplay();
         
         if (timeLeft <= 0)
         {
@@ -76,6 +78,11 @@ public class LevelManager : MonoBehaviour
     void HealthDisplay()
     {
         healthText.text = "Health: " + GameManager.instance.Health;
+    }
+
+    void HighScoreDisplay()
+    {
+        highScoreText.text = "High Score: " + GameManager.instance.HighScore;
     }
 
     void LevelLoader()

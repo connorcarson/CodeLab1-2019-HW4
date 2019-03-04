@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Reflection;
 using TMPro;
 using UnityEngine;
@@ -10,8 +11,9 @@ public class GameManager : MonoBehaviour
 	public float initCubeBlueSpawnDelay = 3;
 	public float initCubeRedSpawnDelay = 5.5f;
 	public float cubeSpawnRate = 8;
-	
 
+	private const string MyHighScore_File = "/MyHighScore.txt";
+	
 	int health = 100;
 
 	public int Health
@@ -43,9 +45,29 @@ public class GameManager : MonoBehaviour
 		set
 		{
 			score = value;
+			HighScore = score;
 		}
 	}
-	
+
+	int highScore = 0;
+
+	public int HighScore
+	{
+		get
+		{
+			return highScore;
+		}
+		set
+		{
+			if (value > highScore)
+			{
+				highScore = value;
+				string fullPathToFile = Application.dataPath + MyHighScore_File;
+				File.WriteAllText(fullPathToFile, "The current high score is " + highScore);
+			}
+		}
+	}
+
 	public static GameManager instance;
 	
 	// Use this for initialization
