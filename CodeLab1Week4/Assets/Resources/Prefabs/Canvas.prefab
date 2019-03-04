@@ -1320,7 +1320,6 @@ GameObject:
   - component: {fileID: 1853559928}
   - component: {fileID: 1853559927}
   - component: {fileID: 1853559926}
-  - component: {fileID: 1853559925}
   m_Layer: 5
   m_Name: Dropdown
   m_TagString: Untagged
@@ -1435,7 +1434,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1853559925}
+      - m_Target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
+          type: 3}
         m_MethodName: DifficultySetting
         m_Mode: 0
         m_Arguments:
@@ -1448,19 +1448,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Dropdown+DropdownEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1853559925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853559923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd68641cec3694256a32875f8cfebf93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropdown: {fileID: 1853559926}
 --- !u!1 &1986857828
 GameObject:
   m_ObjectHideFlags: 0

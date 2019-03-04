@@ -724,6 +724,14 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 661785583, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 661785583, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6318450825775954989, guid: 7193bcb63874b4f76a9a17fbb276acd2,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -743,6 +751,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853559923, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6318450826787397359, guid: 7193bcb63874b4f76a9a17fbb276acd2,
         type: 3}
@@ -889,12 +901,12 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 661785583, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
+    - target: {fileID: 1098308018, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 661785583, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
-      propertyPath: m_isInputParsingRequired
+    - target: {fileID: 1434471029, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 225378534, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
@@ -921,7 +933,8 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1853559925, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7193bcb63874b4f76a9a17fbb276acd2, type: 3}
 --- !u!114 &688273861 stripped
 MonoBehaviour:
@@ -1598,6 +1611,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
+        type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 688273862}
+    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
+        type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 688273861}
+    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
+        type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 688273863}
+    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
+        type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 688273864}
+    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
+        type: 3}
+      propertyPath: highScoreText
+      value: 
+      objectReference: {fileID: 688273865}
+    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
+        type: 3}
+      propertyPath: dropdown
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
+        type: 3}
+      propertyPath: timeLeft
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
+        type: 3}
+      propertyPath: timeMax
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7863552450918348164, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1652,46 +1705,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
-        type: 3}
-      propertyPath: canvas
-      value: 
-      objectReference: {fileID: 688273862}
-    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
-        type: 3}
-      propertyPath: timerText
-      value: 
-      objectReference: {fileID: 688273861}
-    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
-        type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 688273863}
-    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
-        type: 3}
-      propertyPath: healthText
-      value: 
-      objectReference: {fileID: 688273864}
-    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
-        type: 3}
-      propertyPath: highScoreText
-      value: 
-      objectReference: {fileID: 688273865}
-    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
-        type: 3}
-      propertyPath: dropdown
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
-        type: 3}
-      propertyPath: timeLeft
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863552450918348165, guid: 9326ae02fe2d249989fdb7f4d7b613ef,
-        type: 3}
-      propertyPath: timeMax
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9326ae02fe2d249989fdb7f4d7b613ef, type: 3}

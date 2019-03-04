@@ -7,8 +7,9 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    //private List<string> difficultyLevel = new List<string>() {"Easy", "Normal", "Difficult"};
-    //public Dropdown dropdown;
+    private List<string> difficultyLevel = new List<string>() {"Easy", "Normal", "Difficult"};
+    public Dropdown dropdown;
+    
     //public GameObject playButton;
     //public GameObject dropDownMenu;
     
@@ -52,7 +53,10 @@ public class LevelManager : MonoBehaviour
     {   
         //playButton.SetActive(false);
         //dropDownMenu.SetActive(false);
-        //dropdown.AddOptions(difficultyLevel);
+        
+        dropdown.AddOptions(difficultyLevel);
+        
+        PlayerPrefs.SetInt("difficultyIndex", 2);
         anim = canvas.GetComponent<Animator>();
     }
 
@@ -138,22 +142,30 @@ public class LevelManager : MonoBehaviour
     {
         if (difficultyIndex == 0)
         {
-            //GameManager.instance.initCubeRedSpawnDelay = 5;
-            //GameManager.instance.initCubeBlueSpawnDelay = 8;
-            //GameManager.instance.cubeSpawnRate = 10;
-
+            timeLeft = 90;
+            timeMax = 90;
+            GameManager.instance.initCubeRedSpawnDelay = 5;
+            GameManager.instance.initCubeBlueSpawnDelay = 8;
+            GameManager.instance.cubeSpawnRate = 10;
+            SceneManager.LoadScene(0);
         }
         else if (difficultyIndex == 1)
         {
-            //GameManager.instance.initCubeRedSpawnDelay = 3.5f;
-            //GameManager.instance.initCubeBlueSpawnDelay = 6f;
-            //GameManager.instance.cubeSpawnRate = 8;
+            timeLeft = 60;
+            timeMax = 60;
+            GameManager.instance.initCubeRedSpawnDelay = 3.5f;
+            GameManager.instance.initCubeBlueSpawnDelay = 6f;
+            GameManager.instance.cubeSpawnRate = 8;
+            SceneManager.LoadScene(0);
         } 
         else if (difficultyIndex == 2)
         {
-            //GameManager.instance.initCubeRedSpawnDelay = 1.5f;
-            //GameManager.instance.initCubeBlueSpawnDelay = 3;
-            //GameManager.instance.cubeSpawnRate = 5;
+            timeLeft = 30;
+            timeMax = 30;
+            GameManager.instance.initCubeRedSpawnDelay = 1.5f;
+            GameManager.instance.initCubeBlueSpawnDelay = 3;
+            GameManager.instance.cubeSpawnRate = 5;
+            SceneManager.LoadScene(0);
         }
     }
 }
